@@ -18,5 +18,5 @@ def backend(entry):
     """
     Bit.ly URL shortener backend for Zinnia.
     """
-    bittle = Bittle.objects.bitlify(entry)
+    bittle = Bittle.objects.bitlify(entry, scheme=settings.PROTOCOL)
     return bittle.shortUrl
